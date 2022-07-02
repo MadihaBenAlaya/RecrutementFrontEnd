@@ -1,3 +1,4 @@
+import { OffresService } from './../shared/offres.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffresComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service : OffresService) { }
+  offres;
 
   ngOnInit(): void {
+
+    this.service.getOffres().subscribe(
+      res =>{
+        this.offres = res;
+
+      },
+      err =>{
+        console.log(err);
+      }
+
+    );
+
   }
 
 }
