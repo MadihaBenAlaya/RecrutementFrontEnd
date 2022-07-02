@@ -1,32 +1,14 @@
-<nav>
-    <div class="navbar">
-      <div class="logo">
-        <img src="../assets/images/AddInnLogo.svg" alt="AddInn Logo" />
-      </div>
-      <div class="menu-list">
-        <ul>
-          <li><a routerLink="Login"> Qui Sommes Nous ?</a></li>
-          <li><a href="#">Nous Offres</a></li>
-          <li><a href="#">Secteurs d'activité</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Nous Rejoindre</a></li>
-        </ul>
-      </div>
-      <div class="login-button">
-        <button routerLink="/Login">Se déconnecter</button>
-      </div>
-    </div>
-  </nav>
+<app-header></app-header>
 
 <br>
 <br>
 <div class="container">
     <div class="main-body">
-    
+
           <!-- Breadcrumb -->
-          
+
           <!-- /Breadcrumb -->
-    
+
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
@@ -37,7 +19,7 @@
                       <h4>John Doe</h4>
                       <p class="text-secondary mb-1">Full Stack Developer</p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -84,7 +66,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        {{userDetails.Email}}
+                        {{userDetails.email}}
                     </div>
                   </div>
                   <hr>
@@ -93,7 +75,7 @@
                       <h6 class="mb-0">Telephone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        {{userDetails.Telephone}}
+                        {{userDetails.telephone}}
                     </div>
                   </div>
                   <hr>
@@ -102,7 +84,7 @@
                       <h6 class="mb-0">Addresse</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        {{userDetails.Addresse}}
+                        {{userDetails.addresse}}
                     </div>
                   </div>
                   <hr>
@@ -114,12 +96,12 @@
                 </div>
               </div>
 
-              
-              
+
+
 
             </div>
           </div>
-          
+
           <app-footer></app-footer>
         </div>
     </div>

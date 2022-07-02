@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(private service : UserService, private router : Router, private snackBar : MatSnackBar) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem('token') != null)
+    this.router.navigateByUrl('/');
   }
 
   onSubmit(form:NgForm){

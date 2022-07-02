@@ -12,7 +12,7 @@ export class AuthInterceptor implements HttpInterceptor{
     constructor(private router:Router){
 
     }
-    
+
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
         if (localStorage.getItem('token') != null){
             const clonedReq = req.clone({
@@ -27,7 +27,7 @@ export class AuthInterceptor implements HttpInterceptor{
                         this.router.navigateByUrl('/Login');
                         }
                         else if(err.status == 403)
-                        this.router.navigateByUrl('/home');
+                        this.router.navigateByUrl('/');
                     }
                 )
             )

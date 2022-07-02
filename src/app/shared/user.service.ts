@@ -12,7 +12,7 @@ export class UserService {
 
   readonly BaseURI = 'https://localhost:44390/api';
   formModel = this.fb.group({
-   
+
     Emails: this.fb.group({
       Email: ['', [Validators.required, Validators.email]],
       ConfirmEmail: ['', [Validators.required, Validators.email]]
@@ -25,14 +25,14 @@ export class UserService {
     }, { validator: this.comparePasswords }),
 
   });
- 
+
   register() {
     var body = {
       userName: this.formModel.value.UserName,
       email: this.formModel.value.Emails.Email,
       fullName: this.formModel.value.FullName,
       password: this.formModel.value.Passwords.Password
-      
+
     };
     return this.http.post( this.BaseURI +'/ApplicationUser/Register', body);
   }
@@ -54,7 +54,7 @@ export class UserService {
   }
 
   getUserProfile(){
-    
+
     return this.http.get(this.BaseURI+ '/UserProfile');
   }
 
@@ -73,6 +73,6 @@ export class UserService {
 
 
 
-  
+
 }
 

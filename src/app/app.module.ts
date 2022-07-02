@@ -10,10 +10,10 @@ import { RegisterComponent } from './register/register.component';
 import { FichePosteComponent } from './fiche-poste/fiche-poste.component';
 import { PostesPageComponent } from './postes-page/postes-page.component';
 import { EspaceCondidat2Component } from './espace-condidat2/espace-condidat2.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { DemandesCondidatComponent } from './demandes-condidat/demandes-condidat.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { EspaceCondidatComponent } from './espace-condidat/espace-condidat.component';
-import { LangageTableComponent } from './langage-table/langage-table.component';
 import { ErrorPopupComponent } from './error-popup/error-popup.component';
 import { SuccessPopupComponent } from './success-popup/success-popup.component';
 import { UploadPopupComponent } from './upload-popup/upload-popup.component';
@@ -27,6 +27,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ProfileComponent } from './profile/profile.component';
 import { UserService } from './shared/user.service';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { OffresComponent } from './offres/offres.component';
 
 @NgModule({
   declarations: [
@@ -35,19 +36,18 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     RegisterComponent,
     FichePosteComponent,
     PostesPageComponent,
-    
     EspaceCondidat2Component,
     DemandesCondidatComponent,
     UpdateProfileComponent,
     EspaceCondidatComponent,
-    LangageTableComponent,
     ErrorPopupComponent,
     SuccessPopupComponent,
     UploadPopupComponent,
     HeaderComponent,
     FooterComponent,
     PageAccueilComponent,
-    ProfileComponent
+    ProfileComponent,
+    OffresComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +56,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatFormFieldModule
   ],
   providers: [UserService, {
     provide : HTTP_INTERCEPTORS,

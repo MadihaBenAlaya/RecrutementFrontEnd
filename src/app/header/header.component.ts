@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { UserService } from './../shared/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +9,25 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class HeaderComponent implements OnInit {
+  userDetails;
 
-  constructor() { }
+  constructor(private service : UserService, private router:Router) { }
 
   ngOnInit(): void {
-  }
+    this.service.getUserProfile().subscribe(
+      res =>{
+        this.userDetails = res;
+      },
+      err =>{
+        console.log(err);
+      }
+    )
+    }
 
+    SeDeconnecter(){
+      localStorage.removeItem('token');
+
+      this.router.navigateByUrl('/');
+    }
 }
+

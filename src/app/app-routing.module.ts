@@ -9,7 +9,6 @@ import { EspaceCondidat2Component } from './espace-condidat2/espace-condidat2.co
 import { DemandesCondidatComponent } from './demandes-condidat/demandes-condidat.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { EspaceCondidatComponent } from './espace-condidat/espace-condidat.component';
-import { LangageTableComponent } from './langage-table/langage-table.component';
 import { ErrorPopupComponent } from './error-popup/error-popup.component';
 import { SuccessPopupComponent } from './success-popup/success-popup.component';
 import { UploadPopupComponent } from './upload-popup/upload-popup.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
 { path : 'EspaceCondidat2', component : EspaceCondidat2Component }, // http://localhost:4200/EspaceCondidat2
 { path : 'DemandesCondidat', component : DemandesCondidatComponent },
 { path : 'UpdateProfile', component : UpdateProfileComponent },
-{ path : 'LangageTable', component : LangageTableComponent },
 { path : 'Error', component : ErrorPopupComponent },
 { path : 'Success', component : SuccessPopupComponent },
 { path : 'Upload', component : UploadPopupComponent },
