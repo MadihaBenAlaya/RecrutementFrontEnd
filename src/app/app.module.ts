@@ -28,6 +28,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { UserService } from './shared/user.service';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { OffresComponent } from './offres/offres.component';
+import { CandidaturesComponent } from './candidatures/candidatures.component';
+import { TestTechniquesComponent } from './test-techniques/test-techniques.component';
+import { EntretienRHsComponent } from './entretien-rhs/entretien-rhs.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { OffresComponent } from './offres/offres.component';
     FooterComponent,
     PageAccueilComponent,
     ProfileComponent,
-    OffresComponent
+    OffresComponent,
+    CandidaturesComponent,
+    TestTechniquesComponent,
+    EntretienRHsComponent
   ],
   imports: [
     BrowserModule,

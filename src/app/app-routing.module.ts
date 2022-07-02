@@ -15,6 +15,9 @@ import { UploadPopupComponent } from './upload-popup/upload-popup.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OffresComponent } from './offres/offres.component';
+import { CandidaturesComponent } from './candidatures/candidatures.component';
+import { TestTechniquesComponent } from './test-techniques/test-techniques.component';
+import { EntretienRHsComponent } from './entretien-rhs/entretien-rhs.component';
 
 const routes: Routes = [
 { path : '', component : PageAccueilComponent },
@@ -30,7 +33,10 @@ const routes: Routes = [
 { path : 'Success', component : SuccessPopupComponent },
 { path : 'Upload', component : UploadPopupComponent },
 { path : 'Profile', component : ProfileComponent },
-{ path : 'Offres', component : OffresComponent }
+{ path : 'Offres', component : OffresComponent },
+{ path : 'Candidatures', component : CandidaturesComponent},
+{ path : 'TestTechniques', component : TestTechniquesComponent },
+{ path : 'EntretienRHs', component : EntretienRHsComponent }
 ];
 
 @NgModule({
