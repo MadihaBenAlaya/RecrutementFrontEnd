@@ -34,7 +34,7 @@ export class UserService {
       password: this.formModel.value.Passwords.Password
 
     };
-    return this.http.post( this.BaseURI +'/ApplicationUser/Register', body);
+    return this.http.post( this.BaseURI +'/ApplicationUser/RegisterCandidat', body);
   }
 
   comparePasswords(fb: FormGroup) {

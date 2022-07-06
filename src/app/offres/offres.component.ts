@@ -1,5 +1,7 @@
+import { AjoutOffreComponent } from './../ajout-offre/ajout-offre.component';
 import { OffresService } from './../shared/offres.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-offres',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffresComponent implements OnInit {
 
-  constructor(private service : OffresService) { }
+  constructor(private service : OffresService, public dialog: MatDialog) { }
   offres;
 
   ngOnInit(): void {
@@ -25,5 +27,13 @@ export class OffresComponent implements OnInit {
     );
 
   }
+
+  /*openDialog() {
+    this.dialog.open(AjoutOffreComponent, {
+      data: {
+        animal: 'panda',
+      },
+    });
+  }*/
 
 }

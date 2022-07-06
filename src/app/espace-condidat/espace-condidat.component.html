@@ -39,7 +39,15 @@
           <div class="form-container">
             <div class="left-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nom" />
+                <input type="text" class="form-control" placeholder="FullName" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  formControlName="Email"
+                />
               </div>
               <div class="form-group">
                 <input
@@ -49,57 +57,11 @@
                 />
               </div>
               <div class="form-group">
-                <select class="form-control">
-                  <option value="" disabled selected style="display: none">
-                    Ville
-                  </option>
-
-                  <option>Tunis</option>
-                  <option>Nabeul</option>
-                  <option>Bizert</option>
-                </select>
-              </div>
-              <div class="form-group" id="exampleFormControlSelect1">
-                <select class="form-control">
-                  <option value="" disabled selected style="display: none">
-                    Niveau d’études
-                  </option>
-
-                  <option>BAC</option>
-                  <option>BAC +3</option>
-                  <option>BAC +5</option>
-                  <option>Autre</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <div class="form-group">
-                  <select class="form-control">
-                    <option value="" disabled selected>Spécialité</option>
-
-                    <option>Spécialité 1</option>
-                    <option>Spécialité 2</option>
-                    <option>Spécialité 3</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
                 <input
-                  type="number"
+                  type="tel"
                   class="form-control"
-                  placeholder="Années d’expérience"
+                  placeholder="Numéro de téléphone"
                 />
-              </div>
-              <div class="form-group">
-                <input
-                  type="date"
-                  class="form-control"
-                  placeholder="Date de début disponible"
-                />
-              </div>
-            </div>
-            <div class="right-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Prénom" />
               </div>
               <div class="form-group">
                 <select class="form-control">
@@ -384,48 +346,38 @@
                 </select>
               </div>
               <div class="form-group">
-                <input
-                  type="tel"
-                  class="form-control"
-                  placeholder="Numéro de téléphone"
-                />
+                <input type="text" class="form-control" placeholder="Ville" />
               </div>
-              <div class="form-group">
+
+            </div>
+            <div class="right-form">
+              <div class="form-group" id="exampleFormControlSelect1">
                 <select class="form-control">
                   <option value="" disabled selected style="display: none">
-                    Établissement
+                    Niveau d’études
                   </option>
 
-                  <option>ENIT</option>
-                  <option>ESPRIT</option>
-                  <option>IHEC</option>
-                  <option>TBS</option>
-                  <option>ISET</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <select class="form-control">
-                  <option value="" disabled selected>
-                    Situation d’emploi actuelle
-                  </option>
-
-                  <option>Chomeur</option>
-                  <option>À la recherche d’emploi</option>
+                  <option>BAC</option>
+                  <option>BAC +3</option>
+                  <option>BAC +5</option>
                   <option>Autre</option>
                 </select>
               </div>
-
               <div class="form-group">
-                <select
-                  class="selectpicker form-control"
-                  multiple
-                  data-live-search="false"
-                >
-                  <option>JAVA</option>
-                  <option>C#</option>
-                  <option>PHP</option>
-                </select>
+                <input type="text" class="form-control" placeholder="Spécialité" />
               </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Années d’expérience"
+                />
+              </div>
+
+
+
+
+
             </div>
           </div>
           <div class="buttons-container">

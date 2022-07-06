@@ -18,6 +18,9 @@ import { OffresComponent } from './offres/offres.component';
 import { CandidaturesComponent } from './candidatures/candidatures.component';
 import { TestTechniquesComponent } from './test-techniques/test-techniques.component';
 import { EntretienRHsComponent } from './entretien-rhs/entretien-rhs.component';
+import { AjoutOffreComponent } from './ajout-offre/ajout-offre.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 const routes: Routes = [
 { path : '', component : PageAccueilComponent },
@@ -33,10 +36,33 @@ const routes: Routes = [
 { path : 'Success', component : SuccessPopupComponent },
 { path : 'Upload', component : UploadPopupComponent },
 { path : 'Profile', component : ProfileComponent },
-{ path : 'Offres', component : OffresComponent },
-{ path : 'Candidatures', component : CandidaturesComponent},
-{ path : 'TestTechniques', component : TestTechniquesComponent },
-{ path : 'EntretienRHs', component : EntretienRHsComponent }
+
+{path:'Offres',
+    component: SidebarComponent,
+    children:[
+      {path:'', component:OffresComponent}
+    ]
+},
+{path:'Candidatures',
+    component: SidebarComponent,
+    children:[
+      {path:'', component:CandidaturesComponent}
+    ]
+},
+{path:'TestTechniques',
+    component: SidebarComponent,
+    children:[
+      {path:'', component:TestTechniquesComponent}
+    ]
+},
+{path:'EntretienRHs',
+    component: SidebarComponent,
+    children:[
+      {path:'', component:EntretienRHsComponent}
+    ]
+},
+
+{ path : 'AjoutOffre', component : AjoutOffreComponent },
 ];
 
 @NgModule({

@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatIconModule} from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -31,6 +38,10 @@ import { OffresComponent } from './offres/offres.component';
 import { CandidaturesComponent } from './candidatures/candidatures.component';
 import { TestTechniquesComponent } from './test-techniques/test-techniques.component';
 import { EntretienRHsComponent } from './entretien-rhs/entretien-rhs.component';
+import { AjoutOffreComponent } from './ajout-offre/ajout-offre.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +64,10 @@ import { EntretienRHsComponent } from './entretien-rhs/entretien-rhs.component';
     OffresComponent,
     CandidaturesComponent,
     TestTechniquesComponent,
-    EntretienRHsComponent
+    EntretienRHsComponent,
+    AjoutOffreComponent,
+    SidebarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -63,7 +77,26 @@ import { EntretienRHsComponent } from './entretien-rhs/entretien-rhs.component';
     HttpClientModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+
+    HttpClientModule,
+
+    FormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatIconModule,
+    MatExpansionModule
+
   ],
   providers: [UserService, {
     provide : HTTP_INTERCEPTORS,
