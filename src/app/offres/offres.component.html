@@ -1,34 +1,34 @@
 
-    <button type="button" class="btn btn-primary float-end m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" routerLink="/AjoutOffre"
->
-  Ajouter
-</button>
+  <div class="buttons-container">
+    <button type="button" class="btn btn-primary float-end m-2" routerLink="/AjoutOffre">
+      Ajouter
+    </button>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary float-end m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Filtrer
-</button>
-
+    <button type="button" class="btn btn-secondary float-end m-2">
+      Filtrer
+    </button>
+  </div>
     <div class="demandeCandidatWrapper">
 
       <span class="titel">Liste des offres</span>
-      <div class="tabel-conatiner">
+      <div class="table table-sm" style="width: 700;">
 
         <table>
-          <th>Titre du poste</th>
-          <th>Département</th>
-          <th>Pays</th>
-          <th>Région</th>
+          <th class="fs-6">Titre du poste</th>
+          <th class="fs-6">Département</th>
+          <th class="fs-6">Pays</th>
+          <th class="fs-6">Région</th>
 
-          <th>Diplome démandé</th>
-          <th>Expérience démandée</th>
-          <th>Compétences Techniques démandées</th>
-          <th>Date de début</th>
-          <th>Salaire</th>
-          <th>Type de contrat</th>
+          <th class="fs-6">Diplome démandé</th>
+          <th class="fs-6">Expérience démandée</th>
+          <th class="fs-6">Compétences Techniques démandées</th>
+          <th class="fs-6">Date de début</th>
+          <th class="fs-6">Salaire</th>
+          <th class="fs-6">Type de contrat</th>
           <tr *ngFor="let offre of offres">
             <td>{{offre.nomOffre}}</td>
-            <td>{{offre.departements}}</td>
+            <td>{{offre.departement}}</td>
             <td>{{offre.pays}}</td>
             <td>{{offre.region}}</td>
 
@@ -38,11 +38,13 @@
             <td>{{offre.date_debut}}</td>
             <td>{{offre.salaire}}</td>
             <td>{{offre.type_contrat}}</td>
+            <td><button [routerLink]="['/FichePoste',offre.offreID]">voir plus</button></td>
           </tr>
         </table>
       </div>
 
     </div>
+
 
 
 

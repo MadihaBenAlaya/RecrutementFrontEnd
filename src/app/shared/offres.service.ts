@@ -14,6 +14,10 @@ export class OffresService {
     return this.http.get(this.BaseURI+ '/Offre');
   }
 
+  getOffreById(id){
+    return this.http.get(this.BaseURI+ '/Offre/'+id);
+  }
+
   //Frorm Model
   // create
   formModel = this.fb.group({
@@ -28,6 +32,7 @@ export class OffresService {
 
     salaire: [, ],
     type_contrat: [, ],
+    departement : [, [Validators.required]],
   })
 
   PostOffres (){
@@ -43,6 +48,7 @@ export class OffresService {
 
       salaire: this.formModel.value.salaire,
       type_contrat: this.formModel.value.type_contrat,
+      departement: this.formModel.value.departement,
     };
     return this.http.post( this.BaseURI +'/Offre', body);
   }

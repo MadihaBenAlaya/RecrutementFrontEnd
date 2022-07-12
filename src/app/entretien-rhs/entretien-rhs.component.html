@@ -1,7 +1,5 @@
 
     <div class="espaceCandidatWrapper">
-
-
       <div class="master-container">
         <div class="titel-container">
           <h3>Planifier un entretien RH</h3>
@@ -9,68 +7,81 @@
         <div class="forms-container row">
 
           <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
-          <div class="form-container">
-            <div class="left-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Adresse email du candidat" formControlName="destination" />
+          <div class="container">
+            <div class="row g-2">
+              <div class="col-6">
+
+                  <input type="text" class="form-control" placeholder="Adresse email du candidat" formControlName="destination" />
+
               </div>
-              <div class="form-group">
-                <select class="form-control" formControlName="equipe_recrutement">
-                  <option value="" disabled selected style="display: none">
-                    Equipe de recrutement
-                  </option>
+              <div class="col-6">
 
-                  <option>Esmahene Marzouki</option>
+                  <select class="form-control" formControlName="equipe_recrutement">
+                    <option value="" disabled selected style="display: none">
+                      Equipe de recrutement
+                    </option>
 
-                </select>
+                    <option>Esmahene Marzouki</option>
+
+                  </select>
+
               </div>
-              <div class="form-group">
-                <input
-                  type="date"
-                  class="form-control"
-                  placeholder="Date de dépot"
-                  formControlName="date"
-                />
+              <div class="col-6">
+
+                  <input
+                    type="date"
+                    class="form-control"
+                    placeholder="Date de dépot"
+                    formControlName="date"
+                  />
+
               </div>
-              <div class="form-group">
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder="Heure"
-                  formControlName="heure"
-                />
+              <div class="col-6">
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Heure"
+                    formControlName="heure"
+                  />
+
               </div>
 
 
-            </div>
 
-            <div class="right-form">
-              <div class="form-group">
-                <select class="form-control" formControlName="type_entretien">
-                  <option value="" disabled selected style="display: none">
-                    Type de l'entretien
-                  </option>
 
-                  <option>En ligne</option>
-                  <option>Présentiel</option>
+              <div class="col-6">
 
-                </select>
+                  <select class="form-control" formControlName="type_entretien">
+                    <option value="" disabled selected style="display: none">
+                      Type de l'entretien
+                    </option>
+
+                    <option>En ligne</option>
+                    <option>Présentiel</option>
+
+                  </select>
+
               </div>
-              <div class="form-group">
-                <select class="form-control" formControlName="duree">
-                  <option value="" disabled selected style="display: none">
-                    Durée
-                  </option>
+              <div class="col-6">
 
-                  <option>15 min</option>
-                  <option>20 min</option>
-                  <option>30 min</option>
-                  <option>40 min</option>
+                  <select class="form-control" formControlName="duree">
+                    <option value="" disabled selected style="display: none">
+                      Durée
+                    </option>
 
-                </select>
+                    <option>15 min</option>
+                    <option>20 min</option>
+                    <option>30 min</option>
+                    <option>40 min</option>
+
+                  </select>
+
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Localisation" formControlName="localisation"/>
+              <div class="col-6">
+
+                  <input type="text" class="form-control" placeholder="Localisation" formControlName="localisation"/>
+
               </div>
 
 

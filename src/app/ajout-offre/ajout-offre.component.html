@@ -1,8 +1,4 @@
-
-
     <div class="espaceCandidatWrapper">
-
-
       <div class="master-container">
         <div class="titel-container">
           <h3>Ajouter une offre</h3>
@@ -14,14 +10,32 @@
           <div class="container">
             <div class="row g-2">
               <div class="col-6">
-                <div class="p-3 border bg-light">
+
                   <input type="text" class="form-control" placeholder="Titre du poste" formControlName="nomOffre" />
-                </div>
+
+              </div>
+
+              <div class="col-6">
+
+                  <select class="form-control" formControlName="departement" placeholder="Departement">
+                    <option value="Departement" disabled selected style="display: none">
+                    Département
+                    </option>
+                    <option>Développement Back End</option>
+                    <option>Développement Front End</option>
+                    <option>Développement mobile</option>
+                    <option>Ressources humaines</option>
+                    <option>DevOps</option>
+                    <option>Marketing</option>
+                    <option>Design</option>
+                    <option>Finance</option>
+                  </select>
+
               </div>
 
 
                 <div class="col-6">
-                  <div class="p-3 border bg-light">
+
                     <select class="form-control" formControlName="pays">
                       <option value="" disabled selected style="display: none">
                       Pays
@@ -29,12 +43,12 @@
                       <option>Tunisie</option>
                       <option>France</option>
                     </select>
-                  </div>
+
                 </div>
 
 
                 <div class="col-6">
-                  <div class="p-3 border bg-light">
+
                     <select class="form-control" formControlName="region">
                       <option value="" disabled selected style="display: none">
                       Région
@@ -42,12 +56,12 @@
                       <option>Tunis</option>
                       <option>Tozeur</option>
                     </select>
-                  </div>
+
                 </div>
 
 
                 <div class="col-6">
-                  <div class="p-3 border bg-light">
+
                     <select class="form-control" formControlName="diplome_demande">
                       <option value="" disabled selected style="display: none">
                       Diplome démandé
@@ -55,52 +69,52 @@
                       <option>Ingénieur</option>
                       <option>Technicien</option>
                     </select>
-                  </div>
+
                 </div>
 
 
                 <div class="col-6">
-                  <div class="p-3 border bg-light">
+
                     <input
                       type="date"
                       class="form-control"
                       placeholder="Date de début"
                       formControlName="date_debut"
                     />
-                  </div>
+
                 </div>
 
 
 
 
               <div class="col-6">
-                <div class="p-3 border bg-light">
+
                   <input
                     type="number"
                     class="form-control"
                     placeholder="Expérience démandée"
                     formControlName="experience_demandee"
                   />
-                </div>
+
               </div>
 
 
                 <div class="col-6">
-                  <div class="p-3 border bg-light">
+
                     <input type="text" class="form-control" placeholder="Compétences techniques démandées" formControlName="competences_techniques" />
-                  </div>
+
                 </div>
 
 
                 <div class="col-6">
-                  <div class="p-3 border bg-light">
+
                     <input type="text" class="form-control" placeholder="Qualités interpersonnelles démandées" formControlName="qualites_interpersonnelles"/>
-                  </div>
+
                 </div>
 
 
                 <div class="col-6">
-                  <div class="p-3 border bg-light">
+
                     <select class="form-control" formControlName="type_contrat">
                       <option value="" disabled selected style="display: none">
                         Type de contrat
@@ -108,14 +122,14 @@
                       <option>CDI</option>
                       <option>CDD</option>
                     </select>
-                  </div>
+
                 </div>
 
 
                 <div class="col-6">
-                  <div class="p-3 border bg-light">
+
                     <input type="text" class="form-control" placeholder="Salaire" formControlName="salaire"/>
-                  </div>
+
                 </div>
 
             </div>

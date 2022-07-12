@@ -26,7 +26,7 @@ const routes: Routes = [
 { path : '', component : PageAccueilComponent },
 { path : 'Register', component : RegisterComponent },
 { path : 'Login', component : LoginComponent},
-{ path : 'FichePoste', component : FichePosteComponent },
+{ path : 'FichePoste/:id', component : FichePosteComponent },
 { path : 'PostesPage', component : PostesPageComponent},
 { path : 'EspaceCondidat', component : EspaceCondidatComponent },
 { path : 'EspaceCondidat2', component : EspaceCondidat2Component }, // http://localhost:4200/EspaceCondidat2

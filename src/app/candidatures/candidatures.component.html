@@ -1,23 +1,22 @@
-<button type="button" class="btn btn-primary float-end m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
->
-  Filtrer
-</button>
-
+<div class="buttons-container">
+  <button type="button" class="btn btn-secondary float-end m-2" >
+    Filtrer
+  </button>
+</div>
     <div class="demandeCandidatWrapper">
-
       <span class="titel">Gestion des candidatures</span>
-      <div class="tabel-conatiner">
+      <div class="table table-sm">
         <table>
-          <th>Titre du poste</th>
-          <th>FullName du candidat</th>
-          <th>Email candidat</th>
-          <th>Date de postulation</th>
-          <th>Curriculum Vitae</th>
-          <th>Score</th>
-          <th>Années d'expérience demandé</th>
-          <th>Années d'expérience du candidat</th>
-          <th>Etat</th>
-          <th>Action</th>
+          <th class="fs-6">Titre du poste</th>
+          <th class="fs-6">FullName du candidat</th>
+          <th class="fs-6">Email candidat</th>
+          <th class="fs-6">Date de postulation</th>
+          <th class="fs-6">Curriculum Vitae</th>
+          <th class="fs-6">Score</th>
+          <th class="fs-6">Années d'expérience demandé</th>
+          <th class="fs-6">Années d'expérience du candidat</th>
+          <th class="fs-6">Etat</th>
+          <th class="fs-6">Action</th>
           <tr *ngFor="let candidature of candidatures">
             <td>Offre1</td>
             <td>Madiha Ben Alaya</td>
