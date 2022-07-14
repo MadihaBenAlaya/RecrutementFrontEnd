@@ -12,6 +12,7 @@ export class CandidaturesComponent implements OnInit {
 
   candidatures;
 
+
   ngOnInit(): void {
 
     this.service.getCandidatures().subscribe(
@@ -25,5 +26,6 @@ export class CandidaturesComponent implements OnInit {
 
     );
 
-}
+  }
+
 }

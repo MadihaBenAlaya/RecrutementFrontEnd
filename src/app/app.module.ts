@@ -23,7 +23,6 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { EspaceCondidatComponent } from './espace-condidat/espace-condidat.component';
 import { ErrorPopupComponent } from './error-popup/error-popup.component';
 import { SuccessPopupComponent } from './success-popup/success-popup.component';
-import { UploadPopupComponent } from './upload-popup/upload-popup.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
@@ -42,6 +41,8 @@ import { AjoutOffreComponent } from './ajout-offre/ajout-offre.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { UploadComponent } from './upload/upload.component';
+import { DownloadComponent } from './download/download.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     EspaceCondidatComponent,
     ErrorPopupComponent,
     SuccessPopupComponent,
-    UploadPopupComponent,
     HeaderComponent,
     FooterComponent,
     PageAccueilComponent,
@@ -67,6 +67,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     EntretienRHsComponent,
     AjoutOffreComponent,
     SidebarComponent,
+    UploadComponent,
+    DownloadComponent,
 
   ],
   imports: [

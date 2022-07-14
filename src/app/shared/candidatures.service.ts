@@ -1,4 +1,4 @@
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -12,5 +12,24 @@ export class CandidaturesService {
 
   getCandidatures(){
     return this.http.get(this.BaseURI+ '/Candidature');
+  }
+
+  formModel = this.fb.group({
+    date_postulation: [, [Validators.required]],
+    etat: [,],
+    curriculum_Vitae: [, [Validators.required]],
+    score: [,],
+
+  })
+
+  PostCandidatures (CVPath){
+    var body = {
+      date_postulation: this.formModel.value.date_postulation,
+      etat: this.formModel.value.etat,
+      curriculum_Vitae: CVPath,
+      score: this.formModel.value.score
+
+    };
+    return this.http.post( this.BaseURI +'/Candidature', body);
   }
 }

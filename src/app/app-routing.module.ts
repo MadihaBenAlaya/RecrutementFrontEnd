@@ -11,7 +11,6 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { EspaceCondidatComponent } from './espace-condidat/espace-condidat.component';
 import { ErrorPopupComponent } from './error-popup/error-popup.component';
 import { SuccessPopupComponent } from './success-popup/success-popup.component';
-import { UploadPopupComponent } from './upload-popup/upload-popup.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OffresComponent } from './offres/offres.component';
@@ -20,6 +19,7 @@ import { TestTechniquesComponent } from './test-techniques/test-techniques.compo
 import { EntretienRHsComponent } from './entretien-rhs/entretien-rhs.component';
 import { AjoutOffreComponent } from './ajout-offre/ajout-offre.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 const routes: Routes = [
@@ -34,7 +34,6 @@ const routes: Routes = [
 { path : 'UpdateProfile', component : UpdateProfileComponent },
 { path : 'Error', component : ErrorPopupComponent },
 { path : 'Success', component : SuccessPopupComponent },
-{ path : 'Upload', component : UploadPopupComponent },
 { path : 'Profile', component : ProfileComponent },
 
 {path:'Offres',

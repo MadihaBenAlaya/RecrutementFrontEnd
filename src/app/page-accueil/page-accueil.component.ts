@@ -11,10 +11,10 @@ import { UserService } from '../shared/user.service';
   ]
 })
 export class PageAccueilComponent implements OnInit {
-  
+
   constructor( ) { }
 
   ngOnInit(): void {
   }
-  
+
 }

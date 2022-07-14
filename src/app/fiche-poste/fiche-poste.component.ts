@@ -1,6 +1,8 @@
+import { UploadComponent } from './../upload/upload.component';
 import { ActivatedRoute } from '@angular/router';
 import { OffresService } from './../shared/offres.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-fiche-poste',
@@ -11,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class FichePosteComponent implements OnInit {
 
   constructor(private offreService:OffresService,
-    private ac:ActivatedRoute,) { }
+    private ac:ActivatedRoute, public dialog: MatDialog) { }
 
     myParam;
     offreDettails;
@@ -22,6 +24,13 @@ export class FichePosteComponent implements OnInit {
         this.offreService.getOffreById(this.myParam).subscribe(
           result=>this.offreDettails=result
           )});
+  }
+  openDialog() {
+    this.dialog.open(UploadComponent, {
+      data: {
+        animal: 'panda',
+      },
+    });
   }
 
 }
