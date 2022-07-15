@@ -18,13 +18,13 @@
           <th class="fs-6">Etat</th>
           <th class="fs-6">Action</th>
           <tr *ngFor="let candidature of candidatures">
-            <td>Offre1</td>
-            <td>Madiha Ben Alaya</td>
-            <td>benalayamadiha@gmail.com</td>
+            <td>{{candidature.correspondance.nomOffre}}</td>
+            <td>{{candidature.candidat.fullName}}</td>
+            <td>{{candidature.candidat.email}}</td>
             <td>{{candidature.date_postulation}}</td>
             <td>{{candidature.curriculum_Vitae}}</td>
             <td>{{candidature.score}}</td>
-            <td>experience_demandee</td>
+            <td>{{candidature.correspondance.experience_demandee}}</td>
             <td>experience_candidat</td>
             <td><span class="statue">{{candidature.etat}}</span></td>
             <td>

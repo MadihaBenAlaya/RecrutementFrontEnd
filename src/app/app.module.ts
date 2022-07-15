@@ -16,7 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FichePosteComponent } from './fiche-poste/fiche-poste.component';
 import { PostesPageComponent } from './postes-page/postes-page.component';
-import { EspaceCondidat2Component } from './espace-condidat2/espace-condidat2.component';
+
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DemandesCondidatComponent } from './demandes-condidat/demandes-condidat.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
@@ -43,6 +43,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UploadComponent } from './upload/upload.component';
 import { DownloadComponent } from './download/download.component';
+import { AjoutCandidatureComponent } from './ajout-candidature/ajout-candidature.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { DownloadComponent } from './download/download.component';
     RegisterComponent,
     FichePosteComponent,
     PostesPageComponent,
-    EspaceCondidat2Component,
+
     DemandesCondidatComponent,
     UpdateProfileComponent,
     EspaceCondidatComponent,
@@ -69,6 +70,7 @@ import { DownloadComponent } from './download/download.component';
     SidebarComponent,
     UploadComponent,
     DownloadComponent,
+    AjoutCandidatureComponent,
 
   ],
   imports: [

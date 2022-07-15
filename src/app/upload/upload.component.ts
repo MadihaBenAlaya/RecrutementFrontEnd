@@ -13,7 +13,7 @@ export class UploadComponent implements OnInit {
   message: string;
   @Output() public onUploadFinished = new EventEmitter();
 
-  constructor(private http: HttpClient, private service : CandidaturesService, private fileService: FileService) { }
+  constructor(private http: HttpClient, private fileService: FileService) { }
   mycandidatures;
 
   ngOnInit() {
@@ -42,17 +42,5 @@ export class UploadComponent implements OnInit {
     });
   }
 
-  /*onSubmit() {
-    this.service.PostCandidatures(this.response.dbPath).subscribe(
-      (res: any) => {
-          this.mycandidatures = res;
-          this.service.formModel.reset();
-          //this.router.navigateByUrl('/Candidatures');
-          //this.toastr.success('New user created!', 'Registration successful.');
-      },
-          err => {
-            console.log(err);
-          }
-    );
-  }*/
+
 }

@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FichePosteComponent } from './fiche-poste/fiche-poste.component';
 import { PostesPageComponent } from './postes-page/postes-page.component';
-import { EspaceCondidat2Component } from './espace-condidat2/espace-condidat2.component';
+
 import { DemandesCondidatComponent } from './demandes-condidat/demandes-condidat.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { EspaceCondidatComponent } from './espace-condidat/espace-condidat.component';
@@ -29,7 +29,6 @@ const routes: Routes = [
 { path : 'FichePoste/:id', component : FichePosteComponent },
 { path : 'PostesPage', component : PostesPageComponent},
 { path : 'EspaceCondidat', component : EspaceCondidatComponent },
-{ path : 'EspaceCondidat2', component : EspaceCondidat2Component }, // http://localhost:4200/EspaceCondidat2
 { path : 'DemandesCondidat', component : DemandesCondidatComponent },
 { path : 'UpdateProfile', component : UpdateProfileComponent },
 { path : 'Error', component : ErrorPopupComponent },
