@@ -22,12 +22,14 @@ export class CandidaturesService {
 
   })
 
-  PostCandidatures (CVPath){
+  PostCandidatures (CVPath,OffreId,UserId,myDate = new Date()){
     var body = {
-      date_postulation: this.formModel.value.date_postulation,
-      etat: this.formModel.value.etat,
+      date_postulation: myDate,
+      etat: 'en attente',
       curriculum_Vitae: CVPath,
-      score: this.formModel.value.score
+      score: 0,
+      offreFK: OffreId,
+      candidatFK: UserId
 
     };
     return this.http.post( this.BaseURI +'/Candidature', body);

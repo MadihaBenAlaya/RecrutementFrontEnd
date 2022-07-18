@@ -14,14 +14,22 @@ export class HeaderComponent implements OnInit {
   constructor(private service : UserService, private router:Router) { }
 
   ngOnInit(): void {
-    this.service.getUserProfile().subscribe(
-      res =>{
-        this.userDetails = res;
-      },
-      err =>{
-        console.log(err);
-      }
-    )
+    if (localStorage.getItem('token') != null){
+      this.getUserProfile();
+    }
+
+    }
+
+    getUserProfile(){
+      this.service.getUserProfile().subscribe(
+        res =>{
+          this.userDetails = res;
+        },
+        err =>{
+          console.log(err);
+        }
+
+      );
     }
 
     SeDeconnecter(){
@@ -30,4 +38,3 @@ export class HeaderComponent implements OnInit {
       this.router.navigateByUrl('/');
     }
 }
-

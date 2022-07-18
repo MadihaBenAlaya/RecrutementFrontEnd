@@ -21,8 +21,10 @@
             <td>{{candidature.correspondance.nomOffre}}</td>
             <td>{{candidature.candidat.fullName}}</td>
             <td>{{candidature.candidat.email}}</td>
-            <td>{{candidature.date_postulation}}</td>
-            <td>{{candidature.curriculum_Vitae}}</td>
+            <td>{{candidature.date_postulation|date:'dd/MM/yyyy'}}</td>
+            <td>{{candidature.curriculum_Vitae}}
+              <app-download [fileUrl]="candidature.curriculum_Vitae"></app-download>
+            </td>
             <td>{{candidature.score}}</td>
             <td>{{candidature.correspondance.experience_demandee}}</td>
             <td>experience_candidat</td>
@@ -37,5 +39,3 @@
       </div>
 
     </div>
-
-

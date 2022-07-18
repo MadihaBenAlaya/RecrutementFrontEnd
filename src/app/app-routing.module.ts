@@ -20,6 +20,8 @@ import { EntretienRHsComponent } from './entretien-rhs/entretien-rhs.component';
 import { AjoutOffreComponent } from './ajout-offre/ajout-offre.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UploadComponent } from './upload/upload.component';
+import { AjoutCandidatureComponent } from './ajout-candidature/ajout-candidature.component';
+import { NosOffresComponent } from './nos-offres/nos-offres.component';
 
 
 const routes: Routes = [
@@ -34,6 +36,8 @@ const routes: Routes = [
 { path : 'Error', component : ErrorPopupComponent },
 { path : 'Success', component : SuccessPopupComponent },
 { path : 'Profile', component : ProfileComponent },
+{ path : 'AjoutCandidature', component : AjoutCandidatureComponent },
+{ path : 'NosOffres', component : NosOffresComponent},
 
 {path:'Offres',
     component: SidebarComponent,

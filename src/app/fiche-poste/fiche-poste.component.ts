@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { OffresService } from './../shared/offres.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { AjoutCandidatureComponent } from '../ajout-candidature/ajout-candidature.component';
 
 @Component({
   selector: 'app-fiche-poste',
@@ -25,11 +26,15 @@ export class FichePosteComponent implements OnInit {
           result=>this.offreDettails=result
           )});
   }
-  openDialog() {
-    this.dialog.open(UploadComponent, {
-      data: {
-        animal: 'panda',
-      },
+  openDialog(id) {
+
+    const dialogRef =  this.dialog.open(AjoutCandidatureComponent, {
+      //width: '50%',
+      //height: '50%',
+      data: { offreId: id}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 

@@ -1,5 +1,6 @@
 import { FileService } from './../shared/file.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { HttpEventType, HttpResponse } from '@angular/common/http';
 
 
 @Component({
@@ -11,14 +12,32 @@ export class DownloadComponent implements OnInit {
   message: string;
   progress: number;
 
+  @Input() public fileUrl: string;
+
   constructor(private fileService: FileService) {}
 
     ngOnInit(): void {}
 
     download = () => {
-        this.fileService.download()
-        .subscribe((response) => {
-            this.message = response['message'];
+        this.fileService.download(this.fileUrl).subscribe((event) => {
+            if (event.type === HttpEventType.UploadProgress)
+                this.progress = Math.round((100 * event.loaded) / event.total);
+            else if (event.type === HttpEventType.Response) {
+                this.message = 'Download success.';
+                this.downloadFile(event);
+            }
         });
+    }
+
+    private downloadFile = (data: HttpResponse<Blob>) => {
+        const downloadedFile = new Blob([data.body], { type: data.body.type });
+        const a = document.createElement('a');
+        a.setAttribute('style', 'display:none;');
+        document.body.appendChild(a);
+        a.download = this.fileUrl;
+        a.href = URL.createObjectURL(downloadedFile);
+        a.target = '_blank';
+        a.click();
+        document.body.removeChild(a);
     }
 }
